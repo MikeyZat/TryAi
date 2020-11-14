@@ -5,7 +5,7 @@ import AppContext from '../../AppContext';
 const PageBreadcrumb = () => {
   const { breadcrumbContext } = useContext(AppContext);
   return (
-    <Breadcrumb>
+    <Breadcrumb style={{ minHeight: '22px' }}>
       {breadcrumbContext.map((item, i) => (
         <Breadcrumb.Item key={`${item.text}-${i}`}>{item.text}</Breadcrumb.Item>
       ))}

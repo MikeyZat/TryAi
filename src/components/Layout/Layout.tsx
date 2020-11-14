@@ -1,22 +1,35 @@
 import React from 'react';
 import { Layout } from 'antd';
 import Navbar from '../Navigation/Navbar';
-import PageContent from '../Content/Content';
+import ContentSwitcher from '../ContentSwitcher/ContentSwitcher';
 import PageBreadcrumb from '../PageBreadcrumb/PageBreadcrumb';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 const MainLayout = () => (
-  <Layout>
+  <Layout style={{ minHeight: '100vh' }}>
     <Header />
-    <Layout>
-      <Layout.Sider width={200}>
+    <Layout hasSider>
+      <Layout.Sider theme="light" width={220} collapsible trigger={null} breakpoint="sm">
         <Navbar />
       </Layout.Sider>
-      <Layout style={{ padding: '0 24px 24px' }}>
-        <PageBreadcrumb />
-        <PageContent />
+      <Layout style={{ padding: '16px 16px 0 16px' }}>
+        <div style={{ padding: '0 8px 16px 8px' }}>
+          <PageBreadcrumb />
+        </div>
+        <Layout.Content
+          style={{
+            padding: 24,
+            minHeight: 280,
+            minWidth: 140,
+            background: '#fff',
+          }}
+        >
+          <ContentSwitcher />
+        </Layout.Content>
       </Layout>
     </Layout>
+    <Footer />
   </Layout>
 );
 

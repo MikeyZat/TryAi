@@ -1,0 +1,23 @@
+{
+  "components": {
+    "HomeContent": {
+      "sectionTitle": "Strona główna"
+    },
+    "DigitsRecognition": {
+      "sectionTitle": "Rozpoznawanie liczb"
+    },
+    "ImageRecognition": {
+      "sectionTitle": "Rozpoznawanie obrazów"
+    },
+    "CategoriesContent": {
+      "sectionTitle": "Kategorie"
+    },
+    "Footer": {
+      "title": "TryAi ©2020 stworzone przez {{creators}}"
+    },
+    "common": {
+      "appTitle": "TryAi",
+      "toDo": "Do zrobienia..."
+    }
+  }
+}

@@ -1,35 +1,42 @@
 import React from 'react';
-import { HomeOutlined } from '@ant-design/icons';
+import { HomeOutlined, BarsOutlined, FileImageOutlined, FieldBinaryOutlined } from '@ant-design/icons';
 import HomeContent from '../components/HomeContent/HomeContent';
-import ProjectsContent from '../components/ProjectsContent/ProjectsContent';
+import CategoriesContent from '../components/CategoriesContent/CategoriesContent';
+import DigitRecognitionContent from '../components/DigitRecognition/DigitsContent';
+import ImgRecognitionContent from '../components/ImgRecognition/ImgRecognitionContent';
+import { useTranslation } from 'react-i18next';
 
 export const useRoutes = (): RouteType[] => {
-  return routes;
+  const { t } = useTranslation('common');
+  return getRoutes(t);
 };
 
-export const routes: RouteType[] = [
+export const getRoutes = (t: (id: string) => string): RouteType[] => [
   {
     path: '/',
-    component: <HomeContent />,
     exact: true,
+    text: t('components.HomeContent.sectionTitle'),
     icon: <HomeOutlined />,
-    text: 'Home',
+    component: <HomeContent />,
   },
   {
-    path: '/projects',
-    component: <ProjectsContent />,
+    path: '/categories',
     exact: true,
-    text: 'projects',
+    text: t('components.CategoriesContent.sectionTitle'),
+    icon: <BarsOutlined />,
+    component: <CategoriesContent />,
     routes: [
       {
-        path: '/projects/xD',
-        component: <div>xD</div>,
-        text: 'xD',
+        path: '/categories/digit_recognition',
+        text: t('components.DigitsRecognition.sectionTitle'),
+        icon: <FieldBinaryOutlined />,
+        component: <DigitRecognitionContent />,
       },
       {
-        path: '/projects/y',
-        component: <div>y</div>,
-        text: 'y',
+        path: '/categories/image_recognition',
+        text: t('components.ImageRecognition.sectionTitle'),
+        icon: <FileImageOutlined />,
+        component: <ImgRecognitionContent />,
       },
     ],
   },
