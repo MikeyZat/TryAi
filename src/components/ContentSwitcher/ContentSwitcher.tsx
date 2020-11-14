@@ -19,9 +19,6 @@ const ContentSwitcher = () => {
           {route.component}
         </Route>
       ))}
-      <Route exact path="/">
-        <HomeContent />
-      </Route>
     </Switch>
   );
 };
