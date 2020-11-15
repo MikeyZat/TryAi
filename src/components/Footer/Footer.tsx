@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 const MainHeader = () => {
   const { t } = useTranslation('common');
   return (
-    <Layout.Header>
-      <div style={{ color: '#fff' }}>{t('components.common.appTitle')}</div>
-    </Layout.Header>
+    <Layout.Footer style={{ textAlign: 'center' }}>
+      {t('components.Footer.title', { creators: 'Mikołaj Zatorski & Filip Twardy' })}
+    </Layout.Footer>
   );
 };
 

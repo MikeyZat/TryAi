@@ -27,7 +27,7 @@ const LeftMenu = () => {
   const expandableIds = routes.filter((route) => !!route.routes).map((route) => route.path);
 
   return (
-    <Menu mode="inline" theme="dark" defaultOpenKeys={expandableIds} defaultSelectedKeys={[location.pathname]}>
+    <Menu mode="inline" defaultOpenKeys={expandableIds} defaultSelectedKeys={[location.pathname]}>
       {routes.map(expandRoute)}
     </Menu>
   );

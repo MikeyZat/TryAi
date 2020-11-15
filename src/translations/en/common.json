@@ -1,0 +1,23 @@
+{
+  "components": {
+    "HomeContent": {
+      "sectionTitle": "Home"
+    },
+    "DigitsRecognition": {
+      "sectionTitle": "Digits recognition"
+    },
+    "ImageRecognition": {
+      "sectionTitle": "Image recognition"
+    },
+    "CategoriesContent": {
+      "sectionTitle": "Categories"
+    },
+    "Footer": {
+      "title": "TryAi ©2020 Created by {{creators}}"
+    },
+    "common": {
+      "appTitle": "TryAi",
+      "toDo": "TO DO..."
+    }
+  }
+}
