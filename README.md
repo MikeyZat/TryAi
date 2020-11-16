@@ -15,7 +15,7 @@
 
 ## Motivation
 
-To do ...
+Our goal is to provide machine learning enthusiasts with a place where they can try their ML models and see their results in action. With modern-looking & user-friendly UI you can play with your (or our predefined) solutions by drawing, using images or even capturing a video using your camera! We do our best to bring education and fun together, that's why for every category you can see the notebook which was used for the predefined model creation. We don't want to bore you anymore — go ahead and try it yourself!
 
 ## Authors
 
