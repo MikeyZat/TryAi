@@ -1,5 +1,5 @@
 <p align="center">  
-<!--   <img src="./demo.gif"/> -->
+  <img src="./reacttensorflowgraphics.png"/>
 </p>
 <h1 align="center">
   TryAi
