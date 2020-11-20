@@ -5,26 +5,20 @@ import ContentSwitcher from '../ContentSwitcher/ContentSwitcher';
 import PageBreadcrumb from '../PageBreadcrumb/PageBreadcrumb';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import './layout.less';
 
 const MainLayout = () => (
-  <Layout style={{ minHeight: '100vh' }}>
+  <Layout className="page-container">
     <Header />
     <Layout hasSider>
       <Layout.Sider theme="light" width={220} collapsible trigger={null} breakpoint="sm">
         <Navbar />
       </Layout.Sider>
-      <Layout style={{ padding: '16px 16px 0 16px' }}>
-        <div style={{ padding: '0 8px 16px 8px' }}>
+      <Layout className="content-container">
+        <div className="breadcrumb-container">
           <PageBreadcrumb />
         </div>
-        <Layout.Content
-          style={{
-            padding: 24,
-            minHeight: 280,
-            minWidth: 140,
-            background: '#fff',
-          }}
-        >
+        <Layout.Content className="main-content">
           <ContentSwitcher />
         </Layout.Content>
       </Layout>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import HomeContent from '../HomeContent/HomeContent';
 import { useRoutes } from '../../routes/routes';
 
 const ContentSwitcher = () => {
