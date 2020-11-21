@@ -1,5 +1,21 @@
 @import '~antd/lib/style/themes/default.less';
 
-.logo {
-  color: @primary-color;
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .logo {
+    color: @primary-color;
+    font-size: 1.75rem;
+    letter-spacing: 0.32px;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  .options-container {
+    overflow: hidden;
+    .theme-switcher {
+      color: @primary-2;
+    }
+  }
 }

@@ -15,9 +15,21 @@
     "Footer": {
       "title": "TryAi ©2020 Created by {{creators}}"
     },
+    "Header": {
+      "LanguageSwitcher": {
+        "chooseLanguage": "Change language"
+      },
+      "ThemeSwitcher": {
+        "chooseTheme": "Change theme",
+        "light": "Light",
+        "dark": "dark"
+      }
+    },
     "common": {
       "appTitle": "TryAi",
-      "toDo": "TO DO..."
+      "toDo": "TO DO...",
+      "en": "English",
+      "pl": "Polish"
     }
   }
 }
