@@ -1,11 +1,29 @@
 import React from 'react';
-import { useBreadcrumb } from '../PageBreadcrumb/useBreadcrumb';
 import { useTranslation } from 'react-i18next';
+import MarkdownRenderer from '../MarkdownRenderer/MarkdownRenderer';
+import { useBreadcrumb } from '../PageBreadcrumb/useBreadcrumb';
+import englishTutorial from '../../tutorials/en/quickStart';
+
+type Tutorials = {
+  [key: string]: string;
+};
+
+const tutorials: Tutorials = {
+  en: englishTutorial,
+  pl: '',
+};
 
 const HomeContent = () => {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
   useBreadcrumb([{ text: t('components.HomeContent.sectionTitle') }]);
-  return <div>{t('components.common.toDo')}</div>;
+
+  const markdown = tutorials[i18n.language] || '';
+
+  return (
+    <div>
+      <MarkdownRenderer source={markdown} />
+    </div>
+  );
 };
 
 export default HomeContent;

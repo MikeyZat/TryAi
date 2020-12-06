@@ -1,22 +1,33 @@
-# TryAI Quick start
+const md = `
+## Welcome to TryAi!
 
+Check our quick tutorial below or choose a section from the menu on your left to play with the AI right away!
+
+If you are further interested in this topic you should check:
+
+- [Jupyter notebooks]() - see how our models were created.
+- [Source code on github](https://github.com/MikeyZat/TryAi) - see how our site was built.
+
+---
+
+## TryAI Quick start
 This short introduction uses **Tensorflow** + **TensorflowJS** to:
 1. Build neural network model in Tensorflow Python API
 2. Save model and convert to JSON format
 3. And, finally, evaluate the model at our website!
 ---
 Download and install **Tensorflow** + **TensorflowJS**
-```bash
+\`\`\`bash
 pip install tensorflow tensorflowjs
-```
+\`\`\`
 
-**REMEMBER**  
+**REMEMBER**
 Check the input size of your model at our website! In handwritten model we use 28 x 28 image with 1 color channel, so your model has to have [28, 28, 1] input size.
 
 TODO HERE PUT IMAGE WHERE TO FIND INPUT SIZE!
 
 Firstly, let's focus on python implementation of our very simple handwritten number classificator. Full code is available in *handwritten.ipnyb* [TODO FILE LINK]. 
-```python3
+\`\`\`python
 # Python 3
 import tensorflow as tf
 from tensorflow.keras import datasets, layers, models, losses
@@ -34,21 +45,21 @@ model = models.Sequential([
 ])
 model.compile(optimizer='adam', loss=losses.CategoricalCrossentropy(from_logits=True), metrics=['accuracy'])
 model.fit(x_train, y_train, epochs=2, batch_size=8)
-```
+\`\`\`
 
 Save model to *h5* format
 
-```python3
+\`\`\`python
 # Python3
 model.save("model.h5")
-```
+\`\`\`
 
 Convert model to *JSON* format
 
-```bash
+\`\`\`bash
 # bash
 tensorflowjs_converter --input_format keras model.h5
-```
+\`\`\`
 
 Import model to our website
 
@@ -59,3 +70,5 @@ Test model
 [TODO TEST MODEL GIF
 
 ---
+`;
+export default md;
