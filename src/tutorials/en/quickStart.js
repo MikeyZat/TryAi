@@ -5,7 +5,7 @@ Check our quick tutorial below or choose a section from the menu on your left to
 
 If you are further interested in this topic you should check:
 
-- [Jupyter notebooks]() - see how our models were created.
+- [Jupyter notebooks](/notebooks) - see how our models were created.
 - [Source code on github](https://github.com/MikeyZat/TryAi) - see how our site was built.
 
 ---

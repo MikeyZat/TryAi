@@ -16,9 +16,8 @@ const renderers = {
     return <ReactMarkdown.renderers.Heading {...props} />;
   },
   link: (props: { href: string; children: ReactNode }) => {
-    console.log(props);
     return (
-      <Link href={props.href} target="_blank">
+      <Link href={props.href} target={props.href.startsWith('/') ? undefined: '_blank'}>
         {props.children}
       </Link>
     );
