@@ -1,9 +1,10 @@
 import React from 'react';
-import { HomeOutlined, BarsOutlined, FileImageOutlined, FieldBinaryOutlined } from '@ant-design/icons';
+import { HomeOutlined, BarsOutlined, FileImageOutlined, FieldBinaryOutlined, SolutionOutlined } from '@ant-design/icons';
 import HomeContent from '../components/HomeContent/HomeContent';
 import CategoriesContent from '../components/CategoriesContent/CategoriesContent';
 import DigitRecognitionContent from '../components/DigitRecognition/DigitsContent';
 import ImgRecognitionContent from '../components/ImgRecognition/ImgRecognitionContent';
+import NotebooksContent from '../components/NotebooksContent/NotebooksContent';
 import { useTranslation } from 'react-i18next';
 
 export const useRoutes = (): RouteType[] => {
@@ -39,6 +40,13 @@ export const getRoutes = (t: (id: string) => string): RouteType[] => [
         component: <ImgRecognitionContent />,
       },
     ],
+  },
+  {
+    path: '/notebooks',
+    exact: true,
+    text: t('components.NotebooksContent.sectionTitle'),
+    icon: <SolutionOutlined />,
+    component: <NotebooksContent />,
   },
 ];
 

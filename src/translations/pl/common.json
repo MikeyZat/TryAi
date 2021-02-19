@@ -12,6 +12,15 @@
     "CategoriesContent": {
       "sectionTitle": "Kategorie"
     },
+    "NotebooksContent": {
+      "sectionTitle": "Notebooki",
+      "contentTitle": "Notebooki Jupytera",
+      "contentSubtitle": "Sprawdź w jaki sposób zostały stworzone nasze modele.",
+      "searchPlaceholder": "Znajdź notebook"
+    },
+    "NotebooksGrid": {
+      "notebookLink": "Więcej"
+    },
     "Footer": {
       "title": "TryAi ©2020 stworzone przez {{creators}}"
     },

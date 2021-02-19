@@ -12,6 +12,15 @@
     "CategoriesContent": {
       "sectionTitle": "Categories"
     },
+    "NotebooksContent": {
+      "sectionTitle": "Notebooks",
+      "contentTitle": "Jupyter Notebooks",
+      "contentSubtitle": "Let's take a look inside how our models were built.",
+      "searchPlaceholder": "Find notebooks"
+    },
+    "NotebooksGrid": {
+      "notebookLink": "More"
+    },
     "Footer": {
       "title": "TryAi ©2020 Created by {{creators}}"
     },
