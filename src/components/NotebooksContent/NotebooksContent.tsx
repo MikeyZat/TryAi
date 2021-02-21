@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { PageHeader, Input } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { useBreadcrumb } from '../PageBreadcrumb/useBreadcrumb';
-import NotebooksGrid from './NotebooksGrid';
-import { NotebookDetails } from './notebookTypes';
-import allNotebooks from '../../notebooksInfo/notebooks';
+import CardsGrid from '../Common/CardsGrid/CardsGrid';
+import { CardInfo } from '../Common/CardsGrid/CardsTypes';
+import { useNotebooks } from '../../constData/notebooks';
 import './notebooks.less';
 
 const { Search } = Input;
@@ -14,11 +14,12 @@ const NotebooksContent = () => {
   useBreadcrumb([{ text: t('components.NotebooksContent.sectionTitle') }]);
 
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [notebooks, setNotebooks] = useState<NotebookDetails[]>(allNotebooks);
+  const notebooks = useNotebooks();
+  const [filteredNotebooks, setFilteredNotebooks] = useState<CardInfo[]>(notebooks);
 
   const onSearch = (newQuery: string) => {
     setSearchQuery(newQuery);
-    setNotebooks(allNotebooks.filter((notebook) => notebook.title.toLowerCase().includes(newQuery.toLowerCase())));
+    setFilteredNotebooks(notebooks.filter((notebook) => notebook.title.toLowerCase().includes(newQuery.toLowerCase())));
   };
 
   return (
@@ -39,7 +40,7 @@ const NotebooksContent = () => {
       ]}
       backIcon={false}
     />
-    <NotebooksGrid notebooks={notebooks} />
+    <CardsGrid cardsInfo={filteredNotebooks} />
   </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import MarkdownRenderer from '../MarkdownRenderer/MarkdownRenderer';
+import MarkdownRenderer from '../Common/MarkdownRenderer/MarkdownRenderer';
 import { useBreadcrumb } from '../PageBreadcrumb/useBreadcrumb';
 import englishTutorial from '../../tutorials/en/quickStart';
 

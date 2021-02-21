@@ -10,7 +10,10 @@
       "sectionTitle": "Image recognition"
     },
     "CategoriesContent": {
-      "sectionTitle": "Categories"
+      "sectionTitle": "Categories",
+      "contentTitle": "Algorithms categories",
+      "contentSubtitle": "Check it out by clicking 'more' button.",
+      "searchPlaceholder": "Find categories"
     },
     "NotebooksContent": {
       "sectionTitle": "Notebooks",
@@ -18,8 +21,8 @@
       "contentSubtitle": "Let's take a look inside how our models were built.",
       "searchPlaceholder": "Find notebooks"
     },
-    "NotebooksGrid": {
-      "notebookLink": "More"
+    "CardsInfo": {
+      "cardLinkLabel": "More"
     },
     "Footer": {
       "title": "TryAi ©2020 Created by {{creators}}"
@@ -39,6 +42,16 @@
       "toDo": "TO DO...",
       "en": "English",
       "pl": "Polish"
+    }
+  },
+  "constData": {
+    "notebooks": {
+      "handwrittenTitle": "Handwritten",
+      "handwrittenDescription": "Simple model used for digits recognition."
+    },
+    "categories": {
+      "digitsRecognitionDesc": "Automatically recognizing handwritten digits",
+      "imageRecognitionDesc": "Recognising different objects on images"
     }
   }
 }

@@ -3,7 +3,8 @@ import type { ReactNode } from 'react';
 import { Typography } from 'antd';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-const { Title, Link } = Typography;
+import Link from '../Link/Link';
+const { Title } = Typography;
 
 const renderers = {
   code: ({ language, value }: { language: string; value: ReactNode }) => {
@@ -17,7 +18,7 @@ const renderers = {
   },
   link: (props: { href: string; children: ReactNode }) => {
     return (
-      <Link href={props.href} target={props.href.startsWith('/') ? undefined: '_blank'}>
+      <Link url={props.href} isInternal={props.href.startsWith('/')}>
         {props.children}
       </Link>
     );
