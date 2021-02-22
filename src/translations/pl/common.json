@@ -10,7 +10,10 @@
       "sectionTitle": "Rozpoznawanie obrazów"
     },
     "CategoriesContent": {
-      "sectionTitle": "Kategorie"
+      "sectionTitle": "Kategorie",
+      "contentTitle": "Kategorie algorytmów",
+      "contentSubtitle": "Kliknij 'więcej' i sprawdź jak działają.",
+      "searchPlaceholder": "Znajdź kategorię"
     },
     "NotebooksContent": {
       "sectionTitle": "Notebooki",
@@ -18,8 +21,8 @@
       "contentSubtitle": "Sprawdź w jaki sposób zostały stworzone nasze modele.",
       "searchPlaceholder": "Znajdź notebook"
     },
-    "NotebooksGrid": {
-      "notebookLink": "Więcej"
+    "CardsInfo": {
+      "cardLinkLabel": "Więcej"
     },
     "Footer": {
       "title": "TryAi ©2020 stworzone przez {{creators}}"
@@ -39,6 +42,16 @@
       "toDo": "Do zrobienia...",
       "en": "English",
       "pl": "Polish"
+    }
+  },
+  "constData": {
+    "notebooks": {
+      "handwrittenTitle": "Handwritten",
+      "handwrittenDescription": "Prosty model wytrenowany do rozpoznawania cyfr"
+    },
+    "categories": {
+      "digitsRecognitionDesc": "Automatyczne rozpoznawanie ręcznie pisanych cyfr",
+      "imageRecognitionDesc": "Rozpoznawanie obiektów różnego rodzaju na obrazku/zdjęciu"
     }
   }
 }

@@ -2,9 +2,12 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Menu, Dropdown, Button } from 'antd';
 import { DownOutlined, CheckOutlined } from '@ant-design/icons';
+import { useHistory } from 'react-router'
 
 const LanguageSwitcher = () => {
   const { t, i18n } = useTranslation('common');
+  const history = useHistory();
+  const refreshPage = () => history.go(0);
 
   const languages = ['en', 'pl'];
 
@@ -12,6 +15,7 @@ const LanguageSwitcher = () => {
   const handleLngChange = (lng: string) => {
     localStorage.setItem('lng', lng);
     i18n.changeLanguage(lng);
+    refreshPage();
   };
   const menu = (
     <Menu theme="dark">

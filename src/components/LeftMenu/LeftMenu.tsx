@@ -12,7 +12,7 @@ const LeftMenu = () => {
   const expandRoute = (route: RouteType) => {
     if (route.routes) {
       return (
-        <SubMenu key={route.path} icon={route.icon || null} title={route.text}>
+        <SubMenu  key={route.path} icon={route.icon || null} title={route.text}>
           {route.routes.map(expandRoute)}
         </SubMenu>
       );
@@ -27,7 +27,7 @@ const LeftMenu = () => {
   const expandableIds = routes.filter((route) => !!route.routes).map((route) => route.path);
 
   return (
-    <Menu mode="inline" defaultOpenKeys={expandableIds} defaultSelectedKeys={[location.pathname]}>
+    <Menu mode="inline" defaultOpenKeys={expandableIds} defaultSelectedKeys={[location.pathname]} selectedKeys={[location.pathname]}>
       {routes.map(expandRoute)}
     </Menu>
   );

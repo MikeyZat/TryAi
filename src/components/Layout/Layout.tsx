@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout } from 'antd';
-import Navbar from '../Navigation/Navbar';
+import LeftMenu from '../LeftMenu/LeftMenu';
 import ContentSwitcher from '../ContentSwitcher/ContentSwitcher';
 import PageBreadcrumb from '../PageBreadcrumb/PageBreadcrumb';
 import Header from '../Header/Header';
@@ -12,7 +12,7 @@ const MainLayout = () => (
     <Header />
     <Layout hasSider>
       <Layout.Sider theme="light" width={220} collapsible trigger={null} breakpoint="sm">
-        <Navbar />
+        <LeftMenu />
       </Layout.Sider>
       <Layout className="content-container">
         <div className="breadcrumb-container">

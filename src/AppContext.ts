@@ -1,11 +1,11 @@
 import React from 'react';
 
-type ContextProps = {
+export interface ContextProps {
   setBreadcrumb: React.Dispatch<React.SetStateAction<BreacrumbItemType[]>>;
   breadcrumbContext: BreacrumbItemType[];
 };
 
-export type BreacrumbItemType = {
+export interface BreacrumbItemType {
   text: string;
   url?: string;
 };
